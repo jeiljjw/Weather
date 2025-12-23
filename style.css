@@ -17,6 +17,26 @@ body {
     padding: 0;
 }
 
+/* Left Advertisement */
+.ad-left {
+    position: fixed;
+    left: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+    padding: 20px 10px;
+}
+
+/* Right Advertisement */
+.ad-right {
+    position: fixed;
+    right: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+    padding: 20px 10px;
+}
+
 /* Overlay for better readability */
 body::before {
     content: '';
