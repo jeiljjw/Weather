@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">🌤️ Weather-info</div>
+        <ul class="nav-links">
+            <li><a href="#" class="active" id="navWeather">Weather</a></li>
+            <li><a href="#" id="navSettings">⚙️ Settings</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="weather-card">
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Enter city name...">
+                <button id="searchBtn">Search</button>
+            </div>
+
+            <!-- Current Weather Display -->
+            <div class="weather-info" id="weatherInfo">
+                <p class="placeholder">Search for a city to see weather</p>
+            </div>
+
+            <!-- 7-Day Forecast -->
+            <div class="forecast" id="forecast">
+                <h2>7-Day Forecast</h2>
+                <div class="forecast-container" id="forecastContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="modal" id="settingsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>⚙️ Settings</h2>
+                <button class="close-btn" id="closeSettings">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Theme Setting -->
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <span class="setting-icon">🌗</span>
+                        <span>Theme</span>
+                    </div>
+                    <div class="theme-toggle">
+                        <button class="theme-btn active" data-theme="light">☀️ Light</button>
+                        <button class="theme-btn" data-theme="dark">🌙 Dark</button>
+                    </div>
+                </div>
+
+                <!-- Language Setting -->
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <span class="setting-icon">🌐</span>
+                        <span>Language</span>
+                    </div>
+                    <select id="languageSelect">
+                        <option value="en">English</option>
+                        <option value="ko">Korean</option>
+                        <option value="ja">Japanese</option>
+                        <option value="zh">Chinese</option>
+                    </select>
+                </div>
+
+                <!-- Temperature Unit Setting -->
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <span class="setting-icon">🌡️</span>
+                        <span>Temperature Unit</span>
+                    </div>
+                    <div class="unit-toggle">
+                        <button class="unit-btn active" data-unit="celsius">°C</button>
+                        <button class="unit-btn" data-unit="fahrenheit">°F</button>
+                    </div>
+                </div>
+
+                <!-- Auto Refresh Setting -->
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <span class="setting-icon">🔄</span>
+                        <span>Auto Refresh</span>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="autoRefresh" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <!-- Notifications Setting -->
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <span class="setting-icon">🔔</span>
+                        <span>Notifications</span>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="notifications">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>🌤️ Weather-info</h4>
+                <p>Accurate weather information at your fingertips.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Data Source</h4>
+                <p>Open-Meteo API</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>contact@weather-info.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Weather-info. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
