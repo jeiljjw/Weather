@@ -20,7 +20,7 @@ body {
 /* Left Advertisement */
 .ad-left {
     position: fixed;
-    left: 10;
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 50;
@@ -30,7 +30,7 @@ body {
 /* Right Advertisement */
 .ad-right {
     position: fixed;
-    right: 10;
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 50;
